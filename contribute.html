@@ -45,4 +45,103 @@
       border: 1px solid #1a2230;
       color: #e9eef5;
       padding: 10px 12px;
-      border-radius:
+      border-radius: 10px;
+      font-size: 14px;
+    }
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 10px 14px;
+      border: 1px solid #3a465f;
+      border-radius: 10px;
+      color: #e9eef5;
+      text-decoration: none;
+      font-size: 14px;
+      background: transparent;
+      cursor: pointer;
+    }
+    .button:hover {
+      border-color: #ffffff;
+    }
+    .checkbox {
+      display: flex;
+      gap: 10px;
+      margin-top: 14px;
+      font-size: 13px;
+      color: #a9b4c0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>Contribution Protocol</h1>
+    <p>
+      Access is not granted by belief. It is earned by contribution.
+    </p>
+
+    <div class="card">
+      <p>
+        This is not a sign-up form.<br>
+        No tokens are promised.<br>
+        No status is granted.<br>
+        No reply is guaranteed.
+      </p>
+      <p>
+        Only real, verifiable contribution matters.
+      </p>
+    </div>
+
+    <div class="card">
+      <form method="POST" action="https://formspree.io/f/YOUR_CONTRIBUTION_ID">
+        
+        <input type="hidden" name="_redirect" value="https://truecalling.net/thanks.html">
+        <input type="text" name="_gotcha" style="display:none">
+
+        <label>Name or alias (optional)</label>
+        <input type="text" name="name">
+
+        <label>Email (recommended)</label>
+        <input type="email" name="email">
+
+        <label>Contribution type</label>
+        <select name="type" required>
+          <option value="">Select one</option>
+          <option value="time">Time – direct help to another human</option>
+          <option value="skill">Skill – code, writing, analysis, translation</option>
+          <option value="care">Care – service, repair, mentoring</option>
+          <option value="insight">Insight – critique that improves the system</option>
+        </select>
+
+        <label>What did you actually do?</label>
+        <textarea name="description" required placeholder="Be specific. Who, what, when, how."></textarea>
+
+        <label>Evidence or reference (optional but recommended)</label>
+        <input type="text" name="evidence" placeholder="Link, document, photo, repo, reference">
+
+        <label>What are you requesting next? (optional)</label>
+        <textarea name="request" placeholder="Access, review, task, or nothing"></textarea>
+
+        <div class="checkbox">
+          <input type="checkbox" required>
+          <span>
+            I understand this grants no entitlement and may receive no response.
+          </span>
+        </div>
+
+        <button class="button" type="submit">
+          Submit contribution
+        </button>
+      </form>
+    </div>
+
+    <div class="card">
+      <a class="button" href="index.html">← Back</a>
+    </div>
+  </div>
+</body>
+</html>
