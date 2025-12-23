@@ -20,30 +20,55 @@
     }
     h1 {
       font-size: 32px;
-      margin-bottom: 10px;
+      margin: 0 0 10px 0;
     }
     p {
       color: #a9b4c0;
+      margin: 10px 0;
     }
     .card {
       border: 1px solid #1a2230;
       border-radius: 12px;
       padding: 20px;
-      margin-top: 24px;
+      margin-top: 22px;
       background: #0f131b;
     }
-    a.button {
+    .button, button.button {
       display: inline-block;
-      margin-top: 12px;
+      margin-top: 14px;
       padding: 10px 14px;
       border: 1px solid #3a465f;
       border-radius: 10px;
       color: #e9eef5;
       text-decoration: none;
       font-size: 14px;
+      background: transparent;
+      cursor: pointer;
     }
-    a.button:hover {
+    .button:hover, button.button:hover {
       border-color: #ffffff;
+    }
+    label {
+      display: block;
+      margin-top: 14px;
+      margin-bottom: 6px;
+      font-size: 13px;
+      color: #a9b4c0;
+    }
+    input[type="email"] {
+      width: 100%;
+      background: #0b0f17;
+      border: 1px solid #1a2230;
+      color: #e9eef5;
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    .fineprint {
+      font-size: 12px;
+      color: #a9b4c0;
+      margin-top: 12px;
     }
   </style>
 </head>
@@ -54,42 +79,35 @@
     <p>This is not a sign-up page. It is a decision point.</p>
 
     <div class="card">
-      <p>
-        If you finished Universe 26 and felt nothing, close this page.
-      </p>
+      <p>If you finished Universe 26 and felt nothing, close this page.</p>
+      <p class="fineprint">No shame. No persuasion. Not everyone is called to act.</p>
     </div>
 
     <div class="card">
-      <p>
-        You may observe without pretending you are involved.
-      </p>
+      <p><strong>Witness layer (public, low commitment)</strong></p>
+      <p>You can stay close without pretending you are “in.” You will receive public updates only. No authority, no access, no influence over decisions.</p>
+
       <form method="POST" action="https://formspree.io/f/xwvewzvr">
-  <input type="hidden" name="_redirect" value="https://truecalling.net/thanks.html">
-  <input type="text" name="_gotcha" style="display:none">
+        <input type="hidden" name="_redirect" value="https://truecalling.net/thanks.html">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
-  <label style="display:block;margin-top:14px;margin-bottom:6px;font-size:13px;color:#a9b4c0;">
-    Email (optional)
-  </label>
-  <input
-    type="email"
-    name="email"
-    placeholder="you@example.com"
-    style="width:100%;background:#0b0f17;border:1px solid #1a2230;color:#e9eef5;padding:10px 12px;border-radius:10px;font-size:14px;"
-  >
+        <label for="email">Email (optional)</label>
+        <input id="email" type="email" name="email" placeholder="you@example.com" autocomplete="email">
 
-  <button class="button" type="submit">
-    Receive public updates
-  </button>
-</form>
+        <button class="button" type="submit">Receive public updates</button>
+      </form>
+
+      <p class="fineprint">Privacy: no marketing lists, no resale, no tracking pixels. If we ever break that, you should leave.</p>
     </div>
 
     <div class="card">
-      <p>
-        Or you may contribute something real, without promises.
-      </p>
-      <a class="button" href="contribute.html">
-        I will contribute
-      </a>
+      <p><strong>Contribution layer (private, high commitment)</strong></p>
+      <p><strong>TrueCalling does not accept followers.</strong> Only contributors.</p>
+      <p>You will not be promised tokens, money, or status. This is an experiment in building value without extraction.</p>
+
+      <a class="button" href="contribute.html">Enter contribution protocol</a>
+
+      <p class="fineprint">If you are here to speculate, get early access, or chase hype, do not proceed.</p>
     </div>
   </div>
 </body>
